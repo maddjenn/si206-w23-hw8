@@ -37,6 +37,7 @@ def load_rest_data(db):
         rest_data[name] = {'category': category_name, 'building': building_num, 'rating': rating}
 
     conn.close()
+    
     return rest_data
 
 def plot_rest_categories(db):
@@ -47,7 +48,6 @@ def plot_rest_categories(db):
     chart with restaurant categories and the count of number of restaurants in each
     category.
     """
-    
     conn = sqlite3.connect(db)
     c = conn.cursor()
     
@@ -72,8 +72,6 @@ def plot_rest_categories(db):
     plt.show()
     
     return categories
-
-
 
 def find_rest_in_building(building_num, db_filename):
     conn = sqlite3.connect(db_filename)
