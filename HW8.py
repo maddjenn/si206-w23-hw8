@@ -37,9 +37,7 @@ def load_rest_data(db):
         rest_data[name] = {'category': category_name, 'building': building_num, 'rating': rating}
 
     conn.close()
-    
     return rest_data
-
 
 def plot_rest_categories(db):
     """
@@ -90,8 +88,6 @@ def find_rest_in_building(building_num, db_filename):
     conn.close()
     return [r[0] for r in results]
 
-
-
 def get_highest_rating(db):
     """
     This function returns a list of two tuples. The first tuple contains the
@@ -107,7 +103,7 @@ def get_highest_rating(db):
     along the x-axis
     in descending order (by rating).
     """
-    
+   
     conn = sqlite3.connect(db)
     c = conn.cursor()
 
