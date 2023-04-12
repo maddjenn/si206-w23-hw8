@@ -1,5 +1,5 @@
 # Your name: Madison Jennings
-# Your student id: 4898 0758
+# Your student id: 48980758
 # Your email: maddjenn @umich.edu
 # List who you have worked with on this homework:  faye stover
 
@@ -8,7 +8,6 @@ import os
 import sqlite3
 import unittest
 
-
 def load_rest_data(db):
     """
     This function accepts the filename of a database as a parameter and returns a
@@ -16,7 +15,6 @@ def load_rest_data(db):
     the database, and each inner key is a dictionary, where the key:value pairs should be the
     category, building, and rating for the restaurant.
     """
-
     rest_data = {}
     conn = sqlite3.connect(db)
     c = conn.cursor()
@@ -41,7 +39,6 @@ def load_rest_data(db):
     conn.close()
     
     return rest_data
-
 
 
 def plot_rest_categories(db):
